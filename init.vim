@@ -5,7 +5,7 @@ set nocompatible
 set encoding=utf-8
 
 filetype plugin indent on
-set syntax=enable
+syntax on
 
 set title
 set confirm
