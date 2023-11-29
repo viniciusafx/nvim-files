@@ -1,5 +1,33 @@
 local cmp = require'cmp'
 
+local kind_icons = {
+  Text = "",
+  Method = "",
+  Function = "ƒ",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "",
+  Interface = "",
+  Module = "",
+  Property = "",
+  Unit = "󰅲",
+  Value = "",
+  Enum = "",
+  Keyword = "",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "󰅩",
+  Event = "",
+  Operator = "",
+  TypeParameter = "",
+}
+
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -8,6 +36,19 @@ cmp.setup {
     },
     window = {
         documentation = cmp.config.window.bordered(),
+    },
+    formatting = {
+        format = function(entry, vim_item)
+            local kind = vim_item.kind
+            vim_item.kind = (kind_icons[kind] or '?') .. ' ' .. kind
+
+            vim_item.menu = ({
+                buffer = '[Buffer]',
+                nvim_lsp = '[Lsp]',
+            })[entry.source.name]
+
+            return vim_item
+        end
     },
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
