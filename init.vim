@@ -91,8 +91,6 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
-Plug 'morhetz/gruvbox'
-
 call plug#end()
 
 " ==============================
@@ -105,7 +103,10 @@ let g:netrw_winsize=25
 " ==============================
 " Temas e Cores
 " ==============================
-colorscheme gruvbox
+colorscheme evening
+highlight Normal guibg=none ctermbg=none
+highlight NormalFloat guibg=none ctermbg=none
+highlight EndOfBuffer guibg=none ctermbg=none
 
 " ==============================
 " Autocomandos
