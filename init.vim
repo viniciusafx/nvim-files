@@ -60,6 +60,9 @@ nnoremap <leader>Y "+Y
 
 nnoremap <F2> :Lexplore<cr>
 
+nnoremap <C-p>f :Files<cr>
+nnoremap <C-p>s :Rg<cr>
+
 nnoremap <leader>ev :vsplit ~/.config/nvim/init.vim<cr>
 
 " ==============================
