@@ -11,6 +11,7 @@ require('nvim-treesitter.configs').setup {
         'scss',
         'sql',
         'typescript',
+        'tsx',
         'vim',
         'vimdoc',
         'xml',
