@@ -91,6 +91,8 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
 
+Plug 'windwp/nvim-autopairs'
+
 call plug#end()
 
 " ==============================

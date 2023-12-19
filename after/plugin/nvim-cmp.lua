@@ -1,4 +1,5 @@
 local cmp = require'cmp'
+local cmp_autopairs = require'nvim-autopairs.completion.cmp'
 
 local kind_icons = {
   Text = "",
@@ -82,3 +83,8 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' },
     }),
 })
+
+cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+)
