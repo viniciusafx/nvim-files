@@ -94,6 +94,8 @@ Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'windwp/nvim-autopairs'
 Plug 'windwp/nvim-ts-autotag'
 
+Plug 'RRethy/nvim-treesitter-endwise'
+
 call plug#end()
 
 " ==============================
